@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termo</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="jogo">
+        <h1>TERMO</h1>
+        <div class="aviso">Digite cada letra da palavra depois use o botão <span class="dica">
+            Enter</span> para confirmar</div>
+        <section class="telaDasLetras">
+            <div class="linha" id="linha1">
+                <input type="text" maxlength="1" class="letra" autofocus>
+                <input type="text" maxlength="1" class="letra" >
+                <input type="text" maxlength="1" class="letra" >
+                <input type="text" maxlength="1" class="letra" >
+                <input type="text" maxlength="1" class="letra" >
+            </div>
+            <div class="linha" id="linha2" >
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+            </div>
+            <div class="linha" id="linha3">
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+            </div>
+            <div class="linha" id="linha4">
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+            </div>
+            <div class="linha" id="linha5">
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+            </div>
+            <div class="linha" id="linha6">
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+                <input type="text" maxlength="1" class="letra" disabled>
+            </div>
+        </section>
+        <section class="teclado">
+            <div class="fileira1">
+                <button id="kbd_q" class="tecla">Q</button>
+                <button id="kbd_w" class="tecla">W</button>
+                <button id="kbd_e" class="tecla">E</button>
+                <button id="kbd_r" class="tecla">R</button>
+                <button id="kbd_t" class="tecla">T</button>
+                <button id="kbd_y" class="tecla">Y</button>
+                <button id="kbd_u" class="tecla">U</button>
+                <button id="kbd_i" class="tecla">I</button>
+                <button id="kbd_o" class="tecla">O</button>
+                <button id="kbd_p" class="tecla">P</button>
+            </div>
+            <div class="fileira2">
+                <button id="kbd_a" class="tecla">A</button>
+                <button id="kbd_s" class="tecla">S</button>
+                <button id="kbd_d" class="tecla">D</button>
+                <button id="kbd_f" class="tecla">F</button>
+                <button id="kbd_g" class="tecla">G</button>
+                <button id="kbd_h" class="tecla">H</button>
+                <button id="kbd_j" class="tecla">J</button>
+                <button id="kbd_k" class="tecla">K</button>
+                <button id="kbd_l" class="tecla">L</button>
+                <button id="kbd_back" class="tecla back">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m22.4 31.7 5.6-5.6 5.6 5.6 2.15-2.15L30.1 24l5.55-5.55-2.15-2.15-5.5 5.6-5.6-5.6-2.15 2.15L25.9 24l-5.65 5.55ZM6 24l8.45-11.95q.65-.9 1.55-1.475.9-.575 2-.575h21q1.25 0 2.125.875T42 13v22q0 1.25-.875 2.125T39 38H18q-1.1 0-2-.575-.9-.575-1.55-1.475Zm3.75 0 7.7 11H39V13H17.45ZM39 24V13v22Z"/></svg>    
+                ​</button>
+            </div>
+            <div class="fileira3">
+                <button id="kbd_z" class="tecla">Z</button>
+                <button id="kbd_x" class="tecla">X</button>
+                <button id="kbd_c" class="tecla">C</button>
+                <button id="kbd_v" class="tecla">V</button>
+                <button id="kbd_b" class="tecla">B</button>
+                <button id="kbd_n" class="tecla">N</button>
+                <button id="kbd_m" class="tecla">M</button>
+                <button id="kbd_enter" class="tecla enter" >
+                    ENTER
+                </button>
+            </div>
+        </section>
+    </main>
+    <script src="words.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

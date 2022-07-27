@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500&display=swap');
+
+:root {
+    --azul0: #0e0f1c;
+    --azul1: #1B1D37;
+    --azul2: #232B3E;
+    --azul3: #515e7c20;
+    --azul4: #3367D6;
+    --verde: #6dbc53;
+    --amarelo: #dbb059;
+    --rosa: #B766EC;
+    --vermelho: #ff8a80;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mitr', sans-serif;
+}
+
+body {
+    background-color: var(--azul1);
+    color: #ebebeb;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+.aviso {
+    text-align: center;
+    width: 100%;
+    padding-inline: 0.5rem;
+    font-weight: 100;
+}
+
+.telaDasLetras {
+    /* border: 1px solid white; */
+    max-width: 320px;
+}
+
+.linha {
+    /* border: 1px solid gray; */
+    width: 100%;
+    height: 60px;
+    display: flex;
+    gap: 4px;
+    margin-block: 4px;
+}
+
+.letra {
+    width: 60px;
+    height: 60px;
+    background: var(--azul3);
+    border: 2px solid transparent;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 600;
+    user-select: none;
+}
+
+.letraAtual {
+    background-color: transparent;
+    border: 2px solid var(--azul4);
+}
+
+.letraErrada {
+    background-color: var(--vermelho);
+    border: 2px solid transparent;
+}
+
+.letraCertaNaPosicao {
+    background-color: var(--verde);
+    border: 2px solid transparent;
+}
+
+.letraCertaSemPosicao {
+    background-color: var(--amarelo);
+    border: 2px solid transparent;
+}
+
+/* teclado */
+.fileira1, .fileira2, .fileira3 {
+    display: flex;
+}
+
+.tecla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--azul4);
+    color: #ededed;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 0;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.fileira1 {
+    margin-top: 0.5rem;
+}
+
+.fileira2 {
+    margin-left: 1rem;
+}
+
+.fileira3 {
+    margin-left: 2rem;
+}
+
+.enter, .back {
+    width: 80px;
+}
+
+.enter, .dica {
+    background: var(--verde);
+}
+
+.dica {
+    padding-inline: 0.25rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.back {
+    background: var(--rosa);
+}
+
+svg {
+   fill: #fff;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .tecla {
+        width: 32px;
+        height: 32px;
+        margin: 2px;
+    }
+    .enter {
+        width: 80px;
+    }
+    .aviso {
+        font-size: 0.875rem;
+    }
+
+}
+
+div input {
+    text-transform: uppercase;
+    text-align: center;
+    color: #ededed;
+}
+
+input:focus {
+    /* outline: 2px solid var(--azul4); */
+    outline: 2px solid var(--azul4);
+}
