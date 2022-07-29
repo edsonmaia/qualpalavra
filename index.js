@@ -11,12 +11,17 @@ function bloquearTudo() {
     })
 }
 
+function sortearPalavra(palavras) {
+    let numero = Math.floor(Math.random() * 1001)
+    return palavras[numero]
+}
+
 /*
-1. Escolher uma palavra na lista
-2. Separar as letras da palavra escolhida
-3. Pegar as letras digitadas pelo usuario
-4. Comparar as letras da palavra escolhida com as da palavra digitada
-5. Respostas visuais para acerto, acerto parcial e erros
+    1. Escolher uma palavra na lista
+    2. Separar as letras da palavra escolhida
+    3. Pegar as letras digitadas pelo usuario
+    4. Comparar as letras da palavra escolhida com as da palavra digitada
+    5. Respostas visuais para acerto, acerto parcial e erros
 */
 
 let palavrasDigitadas = {
@@ -31,7 +36,8 @@ console.log(palavrasDigitadas)
 
 // console.log(palavras)
 // 1 escolher palavra, 2 separar letras
-const palavraSecreta = palavras[3] // 50 tempo
+// const palavraSecreta = palavras[0] // 50 tempo
+const palavraSecreta = sortearPalavra(palavras)
 // document.querySelector('.aviso').innerText = palavraSecreta
 const palavraSemAcentos = tirarAcentos(palavraSecreta)
 const letrasSeparadas = palavraSemAcentos.split('')
@@ -77,7 +83,7 @@ function pintarLetras(letrasDigitadas) {
     }) // fim do forEach
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 /* funcao a ser colocada para avaliar a cada tentativa se a palavra existe */
 function buscarPalavraDigitada(palavra) {
     let palavraDigitada = palavra
@@ -90,7 +96,7 @@ function buscarPalavraDigitada(palavra) {
         }, 2000)
     }
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 let situacao = ''
 function gameOver(palavraDigitada) {
     // console.log(palavraDigitada)
@@ -114,8 +120,9 @@ document.querySelector('.enter').addEventListener('click', () => {
         4. depois pintar letras
     */
     // 1A TENTATIVA
+    let letrasDigitadas = ''
     if(palavraDigitada(1) !== '') {
-        let letrasDigitadas = lerLetrasDigitadas(1)
+        letrasDigitadas = lerLetrasDigitadas(1)
         if(palavrasDigitadas.palavra1 == null) {
             palavrasDigitadas.palavra1 = palavraDigitada(1)
         }
@@ -278,12 +285,14 @@ document.querySelector('.enter').addEventListener('click', () => {
         document.querySelectorAll('#linha6 .letra').forEach((linha) => {
             linha.setAttribute('disabled', 'disabled')
         })
+        document.querySelector('.aviso').innerText = `A palavra secreta era ${palavraSecreta}`
         console.log('FIM DO JOGO')
     }
 
 })
 
 function limparLetras() {
+    location.reload()
     let letra = document.querySelectorAll('.letra')
     letra.forEach((letra, indice) => {
         letra.value = ''
